@@ -1,0 +1,19 @@
+how to pass variable in terraform 
+
+variable type in terraform:
+	
+	1: terraform plan -var "variablename=ashish" or terraform plan -var "variableage=40" -var "variablename=ashish"
+	2: terraform plan -var 'usernames=["ashish","arun]'
+	3: terraform plan -var-file=dev.tfvars
+	4: export TF_VAR_variablename=vname
+	
+	Note: Please note that in case you are providing variable type as list so while passwing the argument , you have to pass it in the form of list.
+	
+function:
+variable usernames{
+    type=list
+    default = ["ashish","arun","amit"]
+}
+output allusernames {
+    value="${join("-->",var.usernames)}"
+}
