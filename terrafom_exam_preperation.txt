@@ -1,3 +1,4 @@
+day-25 July
 how to pass variable in terraform 
 
 variable type in terraform:
